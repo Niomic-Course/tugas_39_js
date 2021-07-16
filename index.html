@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 39 JS</title>
+</head>
+<body onclick="tombol();">
+    <button type="button" onclick="tombol();">Jalankan</button>
+    <br>
+    <br>
+    <hr>
+    <p>
+        <b>Active Element</b> Property:
+    </p>
+    <p id="contoh1">contoh</p>
+    <hr>
+    <p>
+        <b>addEventListener()</b> Property:
+    </p>
+    <p id="contoh2">contoh</p>
+    <hr>
+    <p>
+        <b>Anchor</b> Property (<a href="#" name="oren">Jeruk</a> <a href="#" name="melon">Semangka</a>):
+    </p>
+    <p id="contoh3">contoh</p>
+    <hr>
+
+    <script>
+        function tombol() {
+            let a = document.activeElement.tagName;
+            document.getElementById('contoh1').innerHTML = a;
+
+            document.addEventListener('click', function() {
+                document.getElementById('contoh2').innerHTML = 'Sukses! Merubah addEventListener()'
+            })
+            
+            document.getElementById('contoh3').innerHTML = document.anchors.length;
+        }
+    </script>
+</body>
+</html>
